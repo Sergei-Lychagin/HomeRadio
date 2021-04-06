@@ -8,17 +8,7 @@ public class HomeRadio {
     private int minRadioStation;
     private int maxRadioStation;
     private int currentRadioStation;
-    private int arrayStation;
     private boolean on;
-
-    public int getArrayStation() {
-        return arrayStation;
-    }
-
-    public void setArrayStation(int arrayStation) {
-        this.arrayStation = arrayStation;
-    }
-
 
     public int getMinVolume() {
         return minVolume;
