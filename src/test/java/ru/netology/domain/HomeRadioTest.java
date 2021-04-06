@@ -40,7 +40,7 @@ public class HomeRadioTest {
         radioman.setMinVolume(0);
         radioman.setCurrentVolume(10);
         radioman.increaseVolume();
-        int expected = 0;
+        int expected = 10;
 
         assertEquals(expected, radioman.getCurrentVolume());
     }
@@ -53,7 +53,7 @@ public class HomeRadioTest {
         radioman.setMinVolume(0);
         radioman.setCurrentVolume(0);
         radioman.decreaseVolume();
-        int expected = 10;
+        int expected = 0;
 
         assertEquals(expected, radioman.getCurrentVolume());
     }
@@ -154,36 +154,4 @@ public class HomeRadioTest {
         assertEquals(expected, radioman.getCurrentVolume());
     }
 
-    @Test
-    void arrayStationChoice() {
-        HomeRadio radioman = new HomeRadio();
-        radioman.setMaxRadioStation(9);
-        radioman.setMinRadioStation(0);
-        radioman.arrayStation(22);
-        int expected = 5;
-
-        assertEquals(expected, radioman.getCurrentRadioStation());
-    }
-
-    @Test
-    void arrayStationChoice1() {
-        HomeRadio radioman = new HomeRadio();
-        radioman.setMaxRadioStation(9);
-        radioman.setMinRadioStation(0);
-        radioman.arrayStation(-1);
-        int expected = 5;
-
-        assertEquals(expected, radioman.getCurrentRadioStation());
-    }
-
-    @Test
-    void arrayStationChoice2() {
-        HomeRadio radioman = new HomeRadio();
-        radioman.setMaxRadioStation(9);
-        radioman.setMinRadioStation(0);
-        radioman.arrayStation(6);
-        int expected = 6;
-
-        assertEquals(expected, radioman.getCurrentRadioStation());
-    }
 }

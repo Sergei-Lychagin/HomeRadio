@@ -85,7 +85,7 @@ public class HomeRadio {
         if (currentVolume < maxVolume) {
             currentVolume++;
         } else {
-            currentVolume = minVolume;
+            currentVolume = maxVolume;
         }
     }
 
@@ -94,7 +94,7 @@ public class HomeRadio {
         if (currentVolume > minVolume) {
             currentVolume--;
         } else {
-            currentVolume = maxVolume;
+            currentVolume = minVolume;
         }
     }
 
@@ -128,20 +128,6 @@ public class HomeRadio {
         }
         this.currentRadioStation = currentRadioStation;
     }
-
-    public void arrayStation(int arrayStation) {
-        this.currentRadioStation = 5;
-        if (arrayStation < minRadioStation) {
-            this.currentRadioStation = currentRadioStation;
-            return;
-        }
-        if (arrayStation > maxRadioStation) {
-            this.currentRadioStation = currentRadioStation;
-            return;
-        }
-        this.currentRadioStation = arrayStation;
-    }
-
 
 }
 
