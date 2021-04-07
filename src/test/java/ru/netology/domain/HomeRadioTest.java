@@ -107,7 +107,7 @@ public class HomeRadioTest {
         radioman.nextRadioStation();
         int expected = 0;
 
-        assertEquals(expected, radioman.getCurrentVolume());
+        assertEquals(expected, radioman.getCurrentRadioStation());
     }
 
     @Test
